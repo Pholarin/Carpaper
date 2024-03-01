@@ -7,34 +7,82 @@ body{
 }
 
 main{
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 *{
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
-}
+	
 
 #bannertext{
     text-align: justify;
  
 }
 
+.bannersec{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: url("../assets/mainroad.jpeg");
+}
+
+
+.overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.65);
+	color: white;
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; */
+}
+
+
 /* #bannerimg{
     width: 600px;
 } */
 
 
-/* .bantextheader{
-    padding-top: 120px;
-} */
+.bantextheader{
 
-
-#bantextheadercontent{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 85%;
+	text-align: center;
 }
+
+#flinebanner{
+	font-size: 60px;
+	
+}
+#slinebanner{
+	font-size: 40px;
+	text-transform: capitalize;
+	text-decoration: none;
+	
+	
+}
+
+#slinebanner>a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.card-img-top{
+	max-width: 100%;
+}
+
 
 #getquote{
     margin-bottom: 30px;
@@ -43,11 +91,17 @@ main{
 .navbar{
 
     padding-top: 40px;
+
+}
+
+.nav-link{
+	color: #ffffff;
 }
 
 .whatwedo{
 
     padding-top: 75px;
+
 }
 
 .bdyarticle{
@@ -195,8 +249,8 @@ ul{
  */
 
  .card{
-    border-radius: 30px;
-    background: #fff;
+    border-radius: 15px;
+    background: #ffffff;
     box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   /* padding: 14px 80px 18px 36px; */
@@ -211,11 +265,6 @@ ul{
 
 .card-text{
 	color: #5e6e78;
+	font-size: 13px;
 }
 
-/* .rfrm{
-	background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
-	   background-repeat: no-repeat;
-	 background-position: right;
-	 background-size: 80px;
- } */
