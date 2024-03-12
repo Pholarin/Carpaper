@@ -54,3 +54,39 @@ window.onload = function() {
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
 };
+
+
+//Animation
+
+
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) => {
+
+      console.log(entry)
+      if(entry.isIntersecting){
+          entry.target.classList.add('show');
+      }
+      // else{
+      //     entry.target.classList.remove('show');
+      // }
+
+  });
+
+});
+
+
+const hiddenElements= document.querySelectorAll('.hiddensec');
+hiddenElements.forEach((el) =>observer.observe(el));
+
+// about us
+
+const hiddenAbout= document.querySelectorAll('.hiddenabt');
+hiddenAbout.forEach((el) =>observer.observe(el));
+
+
+// toggler
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarSupportedContent')
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false})
+navLinks.forEach((l) => {l.addEventListener('click', () => { bsCollapse.toggle() })
+})

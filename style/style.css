@@ -5,19 +5,23 @@ body{
 	background-color: #ffffff;
 	
 }
+html {
+	scroll-behavior: smooth;
+  }
 
 main{
-	padding-left: 25px;
-	padding-right: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
 }
 *{
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
-	
+}
 
-#bannertext{
-    text-align: justify;
+#testam{
+  
+	animation: 3s infinite alternate slidein;
  
 }
 
@@ -74,9 +78,22 @@ main{
 	
 }
 
+.nav-item>a:hover{
+
+	color: #e91e63;
+	/* text-decoration:underline; */
+}
+#active{
+	color: #e91e63;
+}
+
 #slinebanner>a{
 	text-decoration: none;
 	color: #ffffff;
+}
+
+#about{
+	padding: 100px 0px 30px 0px;
 }
 
 .card-img-top{
@@ -84,25 +101,61 @@ main{
 }
 
 
-#getquote{
+/* #getquote{
     margin-bottom: 30px;
-}
+} */
 
 .navbar{
 
-    padding-top: 40px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   
 
 }
 
 .nav-link{
 	color: #ffffff;
+	font-weight: 500;
 }
 
-.whatwedo{
 
-    padding-top: 75px;
+.sectionpad{
+
+    padding-top: 65px;
 
 }
+
+/* 
+animation */
+
+@media(prefers-reduced-motion){
+	.hiddensec{
+		transition: none;
+	}
+}
+
+.hiddensec{
+	opacity: 0;
+	transition: all 1.5s;
+	filter: blur(5px);
+	transform: translateX(-100%);
+}
+
+.hiddenabt{
+	opacity: 0;
+	transition: all 2s;
+	filter: blur(5px);
+	transform: translateX(100%);
+}
+
+.show{
+	opacity: 1;
+	filter: blur(0px);
+	transform: translateX(0);
+}
+
+/* 
+end animation */
 
 .bdyarticle{
     color: #5e6e78;
@@ -112,6 +165,9 @@ main{
     margin-top: 30px;
 }
 
+#abtimg{
+	padding-top: 50px;
+}
 .bigcolorow{
 
     height: 30vh;
@@ -122,11 +178,17 @@ main{
 
 }
 
-.btn{
+.btn {
 	background-color: #e91e63;
 	height: 50px;
 	border: none;
+	text-decoration: none;
 
+}
+
+button a{
+	text-decoration: none;
+	color: #ffffff;
 }
 
 .colortxt{
@@ -268,3 +330,57 @@ ul{
 	font-size: 13px;
 }
 
+#map {
+	height: 500px;
+	width: 100%;
+  }
+
+  
+  /* product */
+
+  .product {
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 40px;
+  }
+
+  .product:hover{
+	transform: scale(1.05);
+	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  }
+
+  .product img {
+	max-width: 100%;
+	height: auto;
+  }
+
+  .btn-buy {
+	background-color: #e91e63;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	
+  }
+
+  .btn-buy:hover {
+	background-color: #2e2e2e;
+	color: #ffffff;
+  }
+
+  .proddescription{
+	font-size: 13px;
+	color: #5e6e78;
+  }
+
+  .prodtitle{
+	margin-top: 10px;
+	font-weight: bolder;
+  }
+
+ 
+/* 
+  end product */
